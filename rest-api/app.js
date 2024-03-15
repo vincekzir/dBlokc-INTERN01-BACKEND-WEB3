@@ -73,6 +73,6 @@ app.get("/nft/:walletAddress", async (request, response) => {
     const nfts = await getNFTs(walletAddress);
     response.json({ walletAddress, nfts });
   } catch (error) {
-    response.status(500).json({ error: "Failed to retrieve native balance" });
+    response.status(500).json({ error: "Failed to retrieve NFTs" });
   }
 });
